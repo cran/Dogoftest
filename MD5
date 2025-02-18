@@ -1,0 +1,11 @@
+b934dc0fabf2d9e494d0532a3b1322fa *DESCRIPTION
+5f57b4180211e9606a1e020980647475 *LICENSE
+1a54a7a381857a6b0c3d33d8ef36821e *NAMESPACE
+03fcd1df7e6208e2be7e02b48412f7ca *R/cvmgof.R
+386b60d6c6de0c78faa83c3e4a7d56c2 *R/ksgof.R
+33fc2ab2db05648a02375e5fb9196866 *R/qCvMgof.R
+ee75151bcda36033cbaa2ac36176c4db *R/simpleCvMgof.R
+80d282d297de6a208ae890d9c69e45eb *man/cvmgof.Rd
+5edf6a75637475d0fe535f7e341ecbfe *man/ksgof.Rd
+ce76649a688c50cdde9aa335f6dca6c8 *man/qCvMgof.Rd
+10e3631784967fe0b3e2c0f7f94f966e *man/simpleCvMgof.Rd
