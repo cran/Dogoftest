@@ -22,14 +22,14 @@
 #' print(result)
 
 cvmgof <- function(x) {
-  x <- sort(x) # 对数据进行排序
-  n <- length(x) # 计算样本大小
-  mean.x <- mean(x) # 计算样本均值和标准差
+  x <- sort(x)
+  n <- length(x)
+  mean.x <- mean(x)
   sd.x <- sd(x)
-  p <- pnorm((x - mean.x) / sd.x) # 计算正态分布的累积分布函数（CDF）值
-  W <- (1/(12 * n) + sum((p - (2 * seq(1:n) - 1)/(2 * n))^2)) # 计算W统计量
-  WW <- (1 + 0.5/n) * W # 调整W统计量
-  if (WW < 0.0275) { # 根据WW的值计算p值
+  p <- pnorm((x - mean.x) / sd.x)
+  W <- (1/(12 * n) + sum((p - (2 * seq(1:n) - 1)/(2 * n))^2))
+  WW <- (1 + 0.5/n) * W
+  if (WW < 0.0275) {
     pval <- 1 - exp(-13.953 + 775.5 * WW - 12542.61 * WW^2)
   } else if (WW < 0.051) {
     pval <- 1 - exp(-5.903 + 179.546 * WW - 1515.29 * WW^2)

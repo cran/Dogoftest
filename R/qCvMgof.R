@@ -19,12 +19,12 @@
 #' result <- qCvMgof(X, p)
 #' print(result)
 
-qCvMgof <- function(X, p) { # 辅助函数，用于uniroot寻找分位数
+qCvMgof <- function(X, p) {
   X <- sort(X)
-  n <- length(X)      # 获取样本大小
-  k <- seq_len(n)     # 创建一个从1到n的序列
-  W2 <- 1/(12 * n) + sum((X - (2*k - 1)/(2*n))^2) # 计算Cramer-von Mises统计量
+  n <- length(X)
+  k <- seq_len(n)
+  W2 <- 1/(12 * n) + sum((X - (2*k - 1)/(2*n))^2)
   f <- function(q) {1 - exp(-q^2 / 2) - p}
-  res <- uniroot(f, c(0, 10)) # 使用uniroot函数找到分位数
+  res <- uniroot(f, c(0, 10))
   return(res$root)
 }

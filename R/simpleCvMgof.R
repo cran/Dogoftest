@@ -25,10 +25,10 @@
 #' print(result)
 
 simpleCvMgof <- function(X) {
-  X <- sort(X)  # Sort the data
-  n <- length(X)  # Get the sample size
-  k <- seq_len(n)  # Create a sequence from 1 to n
-  W2 <- 1/(12 * n) + sum((X - (2*k - 1)/(2*n))^2)  # Calculate the Cramer-von Mises statistic
-  pvalue <- 1 - exp(-W2^2 / 2)  # Calculate the p-value
-  return(list(statistic = W2, pvalue = pvalue, statname = "CvM"))  # Return the result list
+  X <- sort(X)
+  n <- length(X)
+  k <- seq_len(n)
+  W2 <- 1/(12 * n) + sum((X - (2*k - 1)/(2*n))^2)
+  pvalue <- 1 - exp(-W2^2 / 2)
+  return(list(statistic = W2, pvalue = pvalue, statname = "CvM"))
 }

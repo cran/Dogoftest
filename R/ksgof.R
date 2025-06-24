@@ -22,14 +22,14 @@
 #' print(result)
 
 ksgof <- function(x) {
-  n <- length(x) # 计算样本大小
-  mean.x <- mean(x) # 计算样本均值和标准差
+  n <- length(x)
+  mean.x <- mean(x)
   sd.x <- sd(x)
-  p <- pnorm((x - mean.x) / sd.x) # 标准化数据
-  Dplus <- max(seq(1:n)/n - p) # 计算D+和D-统计量
+  p <- pnorm((x - mean.x) / sd.x)
+  Dplus <- max(seq(1:n)/n - p)
   Dminus <- max(p - (seq(1:n) - 1)/n)
-  K <- max(Dplus, Dminus) # 计算K统计量
-  if (n <= 100) { # 根据样本大小调整K统计量
+  K <- max(Dplus, Dminus)
+  if (n <= 100) {
     Kd <- K
     nd <- n
   } else {
@@ -38,8 +38,7 @@ ksgof <- function(x) {
   }
   pvalue <- exp(-7.01256 * Kd^2 * (nd + 2.78019) + 2.99587 *
                   Kd * sqrt(nd + 2.78019) - 0.122119 +
-                  0.974598/sqrt(nd) + 1.67997/nd) # 计算p值
-  # 如果p值大于0.1，根据KK的值进一步调整p值
+                  0.974598/sqrt(nd) + 1.67997/nd)
   if (pvalue > 0.1) {
     KK <- (sqrt(n) - 0.01 + 0.85/sqrt(n)) * K
     if (KK <= 0.302) {
