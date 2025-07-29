@@ -1,8 +1,8 @@
 Package: Dogoftest
 Title: Distributed Online Goodness-of-Fit Tests for Distributed
         Datasets
-Date: 2025-06-16
-Version: 0.2
+Date: 2025-07-28
+Version: 0.3
 Authors@R: c(person("Guangbao", "Guo",role = c("aut", "cre"),
            email = "ggb11111111@163.com",
            comment =  c(ORCID = "0000-0002-4115-6218")),
@@ -12,14 +12,15 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 RoxygenNote: 7.3.2
 Imports: stats
+LazyData: true
 Suggests: testthat (>= 3.0.0)
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2025-06-16 15:04:59 UTC; ASUS
+Packaged: 2025-07-28 15:52:20 UTC; ASUS
 Author: Guangbao Guo [aut, cre] (ORCID:
     <https://orcid.org/0000-0002-4115-6218>),
   Di Chang [aut]
 Maintainer: Guangbao Guo <ggb11111111@163.com>
 Depends: R (>= 3.5.0)
 Repository: CRAN
-Date/Publication: 2025-06-24 09:50:08 UTC
+Date/Publication: 2025-07-29 04:50:02 UTC
